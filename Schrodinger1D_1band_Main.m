@@ -35,7 +35,7 @@ m0=9.10938188E-31;              %% electron mass kg
 % 1 for turn on
 
 FE_1band_Method    = 1;       % Diagonalization of the Hamiltonian (FEM)
-Shooting_1band_Method = 1;    % Scanning in Energy method (Euler)
+Shooting_1band_Method = 0;    % Scanning in Energy method (Euler)
 
 StrainModel  = 0;             % Activate Strain model (Shift the CBand only)
 PrintResults = 1;             % Switch to print or not the dipoles on the shell
