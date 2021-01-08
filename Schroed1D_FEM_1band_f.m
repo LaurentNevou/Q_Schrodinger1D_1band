@@ -4,7 +4,7 @@
 
 function[E,psi]=Schroed1D_FEM_1band_f(z,V0,Mass,n)
 
-% One problem here is the operator (d/z)*(m(z))*(d/z) inside the Shrodinger equation
+% One problem here is the operator (d/dz)*(1/m(z))*(d/dz) inside the Shrodinger equation
 % Without any modification, the results are not accurate and show discontinuity 
 % at the material interface due to the difference of masses
 % One very nice approach is to use the mid-point mass:
