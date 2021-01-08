@@ -44,11 +44,11 @@ V0(end) = 2;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Massp = [         (Mass(1:end-1) + Mass(2:end)) / 2   Mass(end) ];
-Massm = [ Mass(1) (Mass(1:end-1) + Mass(2:end)) / 2              ];
+Massm = [ Mass(1) (Mass(1:end-1) + Mass(2:end)) / 2             ];
 
-b = (1./Massp + 1./Massm) .* ones(1,Nz) ;
-a = 1./Massm(2:end) .* ones(1,Nz-1) ;
-c = 1./Massm(2:end) .* ones(1,Nz-1) ;
+b = (1./Massp + 1./Massm) ;
+a = 1./Massm(2:end)    ;
+c = 1./Massp(1:end-1)  ;
 
 DZ2 = (-1)*diag(b)  +  (1)*diag(a,-1)  +  (1)*diag(c,+1) ;
 
